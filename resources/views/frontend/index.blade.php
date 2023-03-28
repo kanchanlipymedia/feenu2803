@@ -8,7 +8,7 @@
              <li><a href="{{route('new-games')}}">NEW</a></li>
          </ul>
      </div>
-     <div class="nit-content">
+     <div class="nit-content-new">
         <ul class="games-list">
             <li><div class="nit-ads"><a href="#"><img src="{{url('frontend/images/more/ads.png')}}" alt=""></a></div></li>
 
