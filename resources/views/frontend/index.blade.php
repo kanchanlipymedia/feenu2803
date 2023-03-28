@@ -10,7 +10,7 @@
      </div>
      <div class="nit-content-new">
         <ul class="games-list">
-            <li><div class="nit-ads"><a href="#"><img src="{{url('frontend/images/more/ads.png')}}" alt=""></a></div></li>
+        
 
             @foreach($games as $game)
 
