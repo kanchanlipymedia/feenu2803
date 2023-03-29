@@ -54,7 +54,7 @@ header{position: relative;overflow: visible;z-index: 999;
                         }
                         form{display: flex;position: relative;
                             input{border: 0;flex-grow: 1;width: 335px;background-color: #fff;border-radius: 25px;font-size: 17px;color: #2f2f2f;height: 44px;padding: 20px;outline: none;font-weight: 500;}
-                            [type="submit"]{flex-grow: 0;font-size: 0;height: 44px;width: 65px;background: url(../images/icons/search.png) no-repeat center;background-color: transparent;position: absolute;right: 0;top: 0;}
+                            [type="submit"]{flex-grow: 0;font-size: 0;height: 44px;width: 55px;background: url(../images/icons/search.png) no-repeat center;background-color: transparent;position: absolute;right: 0;top: 0;}
                             ::placeholder{color: grey;font-style: oblique;}
                         }
                         .nit-userAc{background: #363636;border-radius: 25px 25px 0 0 ;position: relative;border-radius: 25px;

@@ -166,7 +166,7 @@
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span><img src="{{(!empty($adminData->user_image))? url('upload/admin_images/'.$adminData->user_image):url('upload/no_image.jpg') }}" alt="User Avatar" width="80px"></span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span><img src="{{(!empty($adminData->user_image))? url('upload/admin_images/'.$adminData->user_image):url('upload/no_image.jpg') }}" width="80px"></span>
                 <img class="img-profile rounded-circle"
                     src="{{ asset('frontend\images\icons\my_account.png') }}">
             </a>

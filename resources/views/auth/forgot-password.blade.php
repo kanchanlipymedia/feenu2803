@@ -1,36 +1,43 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-        </div>
+@extends('frontend.Layouts.main')
+@section('main')
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+    <div class="nit-card">
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+             <aside class="col-md-5">
+                 <div class="card">
+                   <div class="card-body">
 
-        <form method="POST" action="{{ route('password.email') }}">
-            @csrf
+                         <h4 class="card-title mb-4 mt-2"><img src="{{('frontend/images/icons/my_account.png')}}"></h4>
+                         <h2>Forget Password</h2>
+                         @if (session('status'))
+                         <div class="mb-4 font-medium text-sm text-green-600">
+                             {{ session('status') }}
+                         </div>
+                         @endif
+                         <form method="POST" action="{{ route('password.email') }}">
+                            @csrf
+                           
+                        <div class="form-group">
+                             <label class="required">Email</label>
+                             <input  id="email" name="email" class="form-control text" placeholder="Email" type="email"  :value ="old('email')"required autofocus >
+                             @if ($errors->has('email'))
+                                <span class="invalid-feedback d-block">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                             <div class="form-group">                          
+                                <button type="submit" class="btn btn-primary btn-block"> {{ __('Email Password Reset Link') }}</button>
+                             <!--<h4 class="card-title mb-4 mt-2">Or Connect With Social Media</h5>
+                             <h4 class="card-title mb-4 mt-2"><img src="{{('frontend/images/icons/fb_icon.png')}}" height="88" width="88"></h4>-->
 
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
+                             </div> <!-- form-group// -->
+                      </form>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
+                   </div>
+             
+             </aside>
+</div>
+@endsection
 
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Email Password Reset Link') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
