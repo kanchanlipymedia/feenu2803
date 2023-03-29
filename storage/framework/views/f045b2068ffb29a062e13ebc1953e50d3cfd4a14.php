@@ -9,7 +9,7 @@
      </div>
      <div class="nit-content-new">
         <ul class="games-list">
-            <li><div class="nit-ads"><a href="#"><img src="<?php echo e(url('frontend/images/more/ads.png')); ?>" alt=""></a></div></li>
+        
 
             <?php $__currentLoopData = $games; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $game): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 

@@ -28,7 +28,7 @@
         <form action="">
             <input type="text" placeholder="Email Address">
             <input type="password" placeholder="Password">
-            <input type="submit" class="btn" value="Continue">
+            <input type="submit" class="btn" >
             <p>Forgot Your Password?</p>
         </form>
     </div>

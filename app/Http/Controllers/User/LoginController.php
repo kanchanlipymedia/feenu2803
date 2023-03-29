@@ -11,5 +11,9 @@ class LoginController extends Controller
     {
         return view('login');
     }
+    public function loginmobile()
+    {
+        return view('frontend.loginmobile');
+    }
     
 }

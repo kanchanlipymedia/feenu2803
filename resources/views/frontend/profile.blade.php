@@ -43,10 +43,10 @@
                </div>
                
 
-               <h6 style="color:rgb(240, 199, 20); padding:10px"">Favorite Games</h6>
+               <h6 style="color:rgb(240, 199, 20); padding:10px" class="favorite-btn">Favorite Games</h6>
                <div class="owl-carousel fvt-carousel owl-theme">
                     @foreach ($favoriteGames as $game)
-                        <div class="item">
+                        <div class="item favorite-btn"">
                             <a href="{{ route('game-detail', ['gameId' => $game->game_id]) }}"><img src="{{ asset($game->game_thumb) }}" alt=""><figcaption>{{ $game->shortName() }}</figcaption></a>
                         </div>
                     @endforeach

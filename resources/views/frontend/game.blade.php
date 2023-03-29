@@ -87,7 +87,7 @@
                                             style="cursor: pointer;"></i><span>{{$game->dislikeCount()}}</span></li>
                                     <li class="favorite-btn" data-url="{{route('update-favorite-status')}}"
                                         data-game-id="{{$game->game_id}}" data-favorite-status=@if($favoriteStatus) "0"
-                                        @else "1" @endif>Favorite<i
+                                        @else "1" @endif><span>Favorite</span><i
                                             class="@if($favoriteStatus) fas @else far @endif fa-heart"
                                             style="color: red;cursor: pointer;"></i></li>
                                     <li class="report-btn" data-game-id="{{$game->game_id}}" style="cursor: pointer;">

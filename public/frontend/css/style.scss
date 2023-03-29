@@ -1,19 +1,14 @@
 //This SCSS file Design by Nitin Saxena
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
 //Colors
 $text: #008cd1;
 $text2: #00cdfc;
 $pop: 'poppins';
-
 @mixin fonts($fc,$fw,$fs){
 	font-size: $fs;
 	font-weight: $fw;
 	color: $fc;
 }
-
-
-
 html{scroll-behavior: smooth;}
 body{padding: 0;margin: 0;font-family: 'Roboto';overflow-x: hidden;}
 *{transition: .3s ease;font-family: 'Roboto';}
@@ -35,14 +30,8 @@ a{color: $text2;}
 .jcsb{justify-content: space-between;}
 .aic{align-items: center;}
 .wd-50{width: 50%;}
-
 @media (min-width: 1300px){.container{max-width: 1700px;}}
-
 @media (min-width: 2000px){.container{max-width: 1700px;}}
-
-
-
-
 header{position: relative;overflow: visible;z-index: 999;
     .nit-upper-nav{background:#1f4867;
         .nit-flex{justify-content: space-between;align-items: center;
@@ -439,10 +428,6 @@ main{min-height: 1330px;background: url(../images/bg/bg-img.jpg);background-size
         border-right: hidden;
         opacity: .5 !important;
     }
-
-
-
-
     .nit-comment{background: #ebebeb;margin-bottom: 2px;padding: 25px 30px;border-radius: 10px;text-align: center;}
     .nit-dis{background: #ebebeb;margin-bottom: 2px;padding: 25px 30px;border-radius: 10px;
         .btn-box{
@@ -487,10 +472,6 @@ main{min-height: 1330px;background: url(../images/bg/bg-img.jpg);background-size
             }
     }
 }
-
-
-
-
 #newMobileMenu{overflow: auto;border-left: 2px solid #000;display: block;position: fixed;width: 100%;height: 100%;z-index: 999;background: #1f4867;right: -110%;top: 0;background: #1f2d3a;
     .nit-close{display: block;text-align: right;margin-bottom: 30px;i{font-size: 23px;color: #fff;padding: 15px 10px;margin-right: 15px;}}
     .nit-search-form{margin: auto;max-width: 90%;margin-bottom: 50px;
@@ -529,10 +510,6 @@ main{min-height: 1330px;background: url(../images/bg/bg-img.jpg);background-size
 }
 
 //Aimations
-
-
-
-
 
 //Media Query
 @media (min-width:1024px){
