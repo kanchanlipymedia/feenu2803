@@ -17,6 +17,11 @@
 <body>
    
 <div class="nit-mobile-box">
+@if (session('status'))
+    <div class="mb-4 font-medium text-sm text-green-600">
+         {{ session('status') }}
+    </div>
+ @endif
    <div class="nit-close-btn">
         <a class="nit-close" href="{{url('/')}}"><i class="fas fa-times"></i></a>
     </div>
@@ -25,11 +30,25 @@
             <i class="fas fa-user"></i>
             <h3>Login</h3>
         </div>
-        <form action="">
-            <input type="text" placeholder="Email Address">
-            <input type="password" placeholder="Password">
-            <input type="submit" class="btn" >
-            <p>Forgot Your Password?</p>
+        <form method="POST" action="{{ route('login') }}">
+             @csrf
+             <input type="hidden" name="user_type" value="2">
+             <input  id="email" name="email" placeholder="Email Address" type="email" required autofocus >
+             @if ($errors->has('email'))
+                <span class="invalid-feedback d-block">
+                    <strong>{{ $errors->first('email') }}</strong>
+                </span>
+             @endif
+             <input  id="password" placeholder="Enter Password" type="password"  name="password" required autocomplete="current-password">
+             @if ($errors->has('password'))
+                                <span class="invalid-feedback d-block">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
+                            @endif
+             <input type="submit" class="btn" >
+            @if (Route::has('password.request'))
+                <a  href="{{ route('password.request') }}">Forgot password</a> 
+            @endif
         </form>
     </div>
 </div>  

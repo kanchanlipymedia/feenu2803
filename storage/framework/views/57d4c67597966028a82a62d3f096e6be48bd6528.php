@@ -17,6 +17,12 @@
 <body>
    
 <div class="nit-mobile-box">
+<?php if(session('status')): ?>
+    <div class="mb-4 font-medium text-sm text-green-600">
+         <?php echo e(session('status')); ?>
+
+    </div>
+ <?php endif; ?>
    <div class="nit-close-btn">
         <a class="nit-close" href="<?php echo e(url('/')); ?>"><i class="fas fa-times"></i></a>
     </div>
@@ -25,11 +31,25 @@
             <i class="fas fa-user"></i>
             <h3>Login</h3>
         </div>
-        <form action="">
-            <input type="text" placeholder="Email Address">
-            <input type="password" placeholder="Password">
-            <input type="submit" class="btn" >
-            <p>Forgot Your Password?</p>
+        <form method="POST" action="<?php echo e(route('login')); ?>">
+             <?php echo csrf_field(); ?>
+             <input type="hidden" name="user_type" value="2">
+             <input  id="email" name="email" placeholder="Email Address" type="email" required autofocus >
+             <?php if($errors->has('email')): ?>
+                <span class="invalid-feedback d-block">
+                    <strong><?php echo e($errors->first('email')); ?></strong>
+                </span>
+             <?php endif; ?>
+             <input  id="password" placeholder="Enter Password" type="password"  name="password" required autocomplete="current-password">
+             <?php if($errors->has('password')): ?>
+                                <span class="invalid-feedback d-block">
+                                    <strong><?php echo e($errors->first('password')); ?></strong>
+                                </span>
+                            <?php endif; ?>
+             <input type="submit" class="btn" >
+            <?php if(Route::has('password.request')): ?>
+                <a  href="<?php echo e(route('password.request')); ?>">Forgot password</a> 
+            <?php endif; ?>
         </form>
     </div>
 </div>  
