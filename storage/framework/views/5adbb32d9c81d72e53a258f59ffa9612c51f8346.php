@@ -50,7 +50,7 @@
                                 <label class="tin"><img src="<?php echo e(asset('frontend/images/more/profile.png')); ?>"></label>
                             </div>
                          <div class="form-group">
-                            <input type="file" class="form-control profile-button" id="inputAddress"  name="image" >                                                  
+                           <input type="file" class="form-control  profile-button" id="inputAddress"  name="image" >                                               
                          </div>
                        
                         <div class="form-group">

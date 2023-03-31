@@ -745,6 +745,7 @@ main .nit-content ul li a figcaption {
   background-color: #959595;
   color: #fff;
   width: 20%;
+  border: none;
   border-radius: 7px;
   height: 45px;
 }
@@ -752,7 +753,7 @@ main .nit-content ul li a figcaption {
 .profile-button {
   background-color: #959595;
   color: #fff;
-  width: 36%;
+  width: 22%;
   border: none;
   border-radius: 7px;
   height: 40px;
