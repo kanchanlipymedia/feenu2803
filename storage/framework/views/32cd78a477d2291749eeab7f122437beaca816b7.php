@@ -134,9 +134,42 @@
         </form>
     </div>
     <div class="box">
-        <i class="fas fa-user"></i>
+ 
+    <?php if(Route::has('login')): ?>
+    <span><?php echo e(Auth::user()->name ?? 'Login'); ?></span>
+                                <div class="nit-dropdown">
+
+                                    <?php if(auth()->guard()->check()): ?>
+                                    <?php if((Auth::user()->user_type)==2): ?>
+                                    <a  href="<?php echo e(route('profile')); ?>" class="btn">My Account</a>
+                                   
+                                    <?php else: ?>
+                                    <a  href="<?php echo e(route('admin.dashboard')); ?>">Dashboard</a>
+                                    <?php endif; ?>
+
+
+                                    <a href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn2">Logout
+
+                                        <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" >
+                                        <?php echo csrf_field(); ?>
+                                        </form>
+                                    </a>
+                                    <?php else: ?>
+                                    
+                                    <div class="box">
+            <i class="fas fa-user"></i>
+      
+        </div>
         <a href="<?php echo e(url('/loginmobile')); ?>" class="btn">Login</a>
-        <a href="<?php echo e(url('/signup')); ?>" class="btn btn2">New Account</a>
+        
+        <?php if(Route::has('register')): ?>
+                                        <a href="<?php echo e(route('register')); ?>" class="btn btn2" >New Account</a>
+                                    <?php endif; ?>
+        <?php endif; ?>
+   
+        </div>
+                                <?php endif; ?>
+        
     </div>
 </div>
 </header>

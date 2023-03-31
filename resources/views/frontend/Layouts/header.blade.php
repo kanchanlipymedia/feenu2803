@@ -134,9 +134,42 @@
         </form>
     </div>
     <div class="box">
-        <i class="fas fa-user"></i>
+ 
+    @if (Route::has('login'))
+    <span>{{ Auth::user()->name ?? 'Login' }}</span>
+                                <div class="nit-dropdown">
+
+                                    @auth
+                                    @if((Auth::user()->user_type)==2)
+                                    <a  href="{{route('profile')}}" class="btn">My Account</a>
+                                   
+                                    @else
+                                    <a  href="{{route('admin.dashboard')}}">Dashboard</a>
+                                    @endif
+
+
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn2">Logout
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+                                        @csrf
+                                        </form>
+                                    </a>
+                                    @else
+                                    
+                                    <div class="box">
+            <i class="fas fa-user"></i>
+      
+        </div>
         <a href="{{url('/loginmobile')}}" class="btn">Login</a>
-        <a href="{{url('/signup')}}" class="btn btn2">New Account</a>
+        
+        @if (Route::has('register'))
+                                        <a href="{{ route('register') }}" class="btn btn2" >New Account</a>
+                                    @endif
+        @endauth
+   
+        </div>
+                                @endif
+        
     </div>
 </div>
 </header>

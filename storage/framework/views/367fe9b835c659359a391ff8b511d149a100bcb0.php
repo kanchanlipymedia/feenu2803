@@ -215,7 +215,7 @@
                 </div>
                 <?php if(!Auth::check()): ?>
                 <div class="nit-comment">
-                    <div>Please<a href="#"> Login </a>To Comment</div>
+                    <div>Please<a href="<?php echo e(route('login')); ?>"> Login </a>To Comment</div>
                 </div>
                 <?php endif; ?>
             </div>
