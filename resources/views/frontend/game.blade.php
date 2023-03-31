@@ -216,7 +216,7 @@
                 </div>
                 @if (!Auth::check())
                 <div class="nit-comment">
-                    <div>Please<a href="#"> Login </a>To Comment</div>
+                    <div>Please<a href="{{ route('login') }}"> Login </a>To Comment</div>
                 </div>
                 @endif
             </div>
