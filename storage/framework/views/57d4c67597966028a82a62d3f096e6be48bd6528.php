@@ -48,7 +48,7 @@
                             <?php endif; ?>
              <input type="submit" class="btn" >
             <?php if(Route::has('password.request')): ?>
-                <a  href="<?php echo e(route('password.request')); ?>">Forgot password</a> 
+                <a  href="<?php echo e(route('password.request')); ?>" style="text-align:center;">Forgot password</a> 
             <?php endif; ?>
         </form>
     </div>

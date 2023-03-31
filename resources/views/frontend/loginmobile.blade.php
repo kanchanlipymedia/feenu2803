@@ -47,7 +47,7 @@
                             @endif
              <input type="submit" class="btn" >
             @if (Route::has('password.request'))
-                <a  href="{{ route('password.request') }}">Forgot password</a> 
+                <a  href="{{ route('password.request') }}" style="text-align:center;">Forgot password</a> 
             @endif
         </form>
     </div>
