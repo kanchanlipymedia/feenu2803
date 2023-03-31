@@ -136,7 +136,11 @@
     <div class="box">
  
     @if (Route::has('login'))
-    <span>{{ Auth::user()->name ?? 'Login' }}</span>
+    <div class="box">
+            <i class="fas fa-user"></i>    
+    
+    <span  style="color:#fff;">  {{ Auth::user()->name ?? '' }}</span>
+    </div>
                                 <div class="nit-dropdown">
 
                                     @auth
@@ -156,10 +160,8 @@
                                     </a>
                                     @else
                                     
-                                    <div class="box">
-            <i class="fas fa-user"></i>
-      
-        </div>
+         
+       
         <a href="{{url('/loginmobile')}}" class="btn">Login</a>
         
         @if (Route::has('register'))

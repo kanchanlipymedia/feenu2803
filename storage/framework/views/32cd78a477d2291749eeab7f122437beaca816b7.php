@@ -136,7 +136,11 @@
     <div class="box">
  
     <?php if(Route::has('login')): ?>
-    <span><?php echo e(Auth::user()->name ?? 'Login'); ?></span>
+    <div class="box">
+            <i class="fas fa-user"></i>    
+    
+    <span  style="color:#fff;">  <?php echo e(Auth::user()->name ?? ''); ?></span>
+    </div>
                                 <div class="nit-dropdown">
 
                                     <?php if(auth()->guard()->check()): ?>
@@ -156,10 +160,8 @@
                                     </a>
                                     <?php else: ?>
                                     
-                                    <div class="box">
-            <i class="fas fa-user"></i>
-      
-        </div>
+         
+       
         <a href="<?php echo e(url('/loginmobile')); ?>" class="btn">Login</a>
         
         <?php if(Route::has('register')): ?>
