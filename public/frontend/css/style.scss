@@ -15,7 +15,7 @@ body{padding: 0;margin: 0;font-family: 'Roboto';overflow-x: hidden;}
 ul,li,ol{padding: 0;margin: 0;list-style: none;}
 .nit-close,.navbar-toggler,.sub-menu{display: none;}
 footer,section{overflow: hidden;}
-img{max-width: 100%;object-fit: cover;height: auto;transition: .5s ease;&:hover{transform: scale(1.1);}}
+img{max-width: 100%;object-fit: cover;height: auto;border-radius: 15px;transition: .5s ease;&:hover{transform: scale(1.1);}}
 .tbg{background-color: $text;}
 .tn{transform: none;}
 .tni{transform: none !important;}
@@ -101,7 +101,7 @@ header{position: relative;overflow: visible;z-index: 999;
         position: absolute;
         right: -20%;top: 10px;}
                     &:hover{i{color: $text;}ul{display: flex;}}
-                    a{@include fonts(#fff,600,14px);text-transform: uppercase;display: flex;padding:5px 14px;align-items: center;border-radius: 25px;border: 1px dashed #fff;;i{color: $text;}}
+                    a{@include fonts(#fff,600,14px);text-transform: uppercase;display: flex;padding:5px 25px;align-items: center;border-radius: 25px;border: 1px dashed #fff;;i{color: $text;}}
                     i{color: $text;margin-right: 10px;}
                     ul{position: absolute;
     flex-direction: column;
@@ -274,21 +274,21 @@ main{min-height: 1330px;background: url(../images/bg/bg-img.jpg);background-size
     }
 }
 .profile-card-body {
-    background: #fff;
+    background: #e7e7e7;
     /* margin-left: 60px; */
     /* margin-right: 60px; */
     font-family: "Font Awesome 5 Brands" !important;
     font-weight: 600px;
     font-size: 14px;
     padding: 3em;
-    border: 1px solid;
+
     border-radius: 20px;
 }
 .View-Profile-button{
     background-color: #00aeef;
     color:#fff;
     width:100%;
-    border: 4px solid ;
+  
     border-radius: 7px;
     height:40px;
     font-size: 15px;
@@ -297,7 +297,7 @@ main{min-height: 1330px;background: url(../images/bg/bg-img.jpg);background-size
     background-color: #cccccc;
     color:#fff;
     width:100%;
-    border: 4px solid ;
+ 
     border-radius: 7px;
     height:40px;
     font-size: 15px;
@@ -306,7 +306,7 @@ main{min-height: 1330px;background: url(../images/bg/bg-img.jpg);background-size
     background-color: #959595;
     color:#fff;
     width:20%;
-    border: 4px solid ;
+ 
     border-radius: 7px;
     height:45px;
 }
@@ -314,16 +314,16 @@ main{min-height: 1330px;background: url(../images/bg/bg-img.jpg);background-size
     background-color: #959595;
     color:#fff;
     width:36%;
-    border: 4px solid ;
+    border:none; 
     border-radius: 7px;
-    height:45px;
+    height:40px;
 }
 
 .profile-submit-button{
     background-color: #39b54a;
     color:#fff;
     width:45%;
-    border: 4px solid ;
+
     border-radius: 7px;
     height:45px;
 }
