@@ -7,7 +7,7 @@
                     <h4 ><img src="<?php echo e(url('frontend/images/icons/Message.png')); ?>"></h4>
                     <h2 >Contact Us</h2>
                     <h3>For any quation of feedback use the form below or you can reach us at</h3>
-                    <h2 >Support@Feenu.com</h2>
+                    <h6><center>Support[At]Feenu[dot]com</center></h6>
                     <?php if(Session::has('success')): ?>
                             <div class="alert alert-success">
                                 <?php echo e(Session::get('success')); ?>
@@ -25,8 +25,8 @@
                                   <span class="text-danger"><?php echo e($errors->first('name')); ?></span>
                               <?php endif; ?>
                             </div>
-                            <input type="hidden" name="phone"  placeholder="Phone" value="9540859838">
-                            <div class="form-group">
+                          
+                            <div class="form-group col-md-6">
                               <label class="required">Email</label>
                               <input type="text" name="email" class="form-control" placeholder="Email" value="<?php echo e(old('email')); ?>">
                               <?php if($errors->has('email')): ?>
@@ -51,7 +51,7 @@
                      
                        <div class="form-group">
                        <label class="required">Message</label>
-                       <textarea name="message" rows="3" class="form-control" value="<?php echo e(old('message')); ?>"></textarea>
+                       <textarea name="message" rows="3" class="form-control" value="<?php echo e(old('message')); ?>" placeholder="message"></textarea>
                        <?php if($errors->has('message')): ?>
                            <span class="text-danger"><?php echo e($errors->first('message')); ?></span>
                        <?php endif; ?>

@@ -567,7 +567,7 @@ main .card {
   box-shadow: 1px 1px 1px 0px;
 }
 main .card-body {
-  background: #fff;
+  background: #e7e7e7;
   margin-left: 60px;
   margin-right: 60px;
   font-family: "Font Awesome 5 Brands" !important;
