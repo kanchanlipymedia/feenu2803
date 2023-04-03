@@ -342,7 +342,7 @@ main{min-height: 1330px;background: url(../images/bg/bg-img.jpg);background-size
     }
     .nit-flex.jcsb{background: #000;padding: 14px;border-radius: 0 0 10px 10px;
         .logo{max-width: 105px;img{transform: none;}}
-        .zoom-icon{cursor: pointer;}
+        .zoom-icon{cursor: pointer; border-radius:0px;}
     }
     .nit-footer{padding: 10px 20px;
         .nit-flex{align-items: center;

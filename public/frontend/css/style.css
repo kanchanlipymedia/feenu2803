@@ -822,6 +822,7 @@ main .nit-content ul li a figcaption {
 }
 .main-game-content .nit-flex.jcsb .zoom-icon {
   cursor: pointer;
+  border-radius: 0px;
 }
 .main-game-content .nit-footer {
   padding: 10px 20px;
