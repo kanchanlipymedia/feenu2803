@@ -17,49 +17,38 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider">
-
-    <li class="nav-item">
-        <a class="nav-link" href="<?php echo e(route('admin.categories')); ?>">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Categories</span></a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" href="<?php echo e(route('admin.tags')); ?>">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tags</span></a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" href="<?php echo e(route('admin.games')); ?>">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Games</span></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="<?php echo e(route('admin.about')); ?>">
-            <i class="fas fa-fw fa-table"></i>
-            <span>About</span></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="<?php echo e(route('admin.privacy')); ?>">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Privacy</span></a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" href="<?php echo e(route('admin.contact')); ?>">
+                        <!-- Divider -->
+                        <hr class="sidebar-divider">
+                            <!-- Nav Item - Pages Collapse Menu -->
+                            <li class="nav-item">
+                                    <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="true" aria-controls="collapseTwo">
+                                    <i class="fas fa-fw fa-cog"></i>
+                                    <span>Manage Website</span></a>         
+                                
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                                    <div class="bg-white py-2 collapse-inner rounded">
+                                        <a class="collapse-item" href="<?php echo e(route('admin.categories')); ?>">Category</a>
+                                        <a class="collapse-item" href="<?php echo e(route('admin.tags')); ?>">Tags</a>
+                                        <a class="collapse-item" href="<?php echo e(route('admin.games')); ?>">Games</a>
+                                        <a class="collapse-item" href="<?php echo e(route('admin.about')); ?>">
+                                        <i class="fas fa-fw fa-table"></i><span>About</span></a>
+                                        <a class="collapse-item" href="<?php echo e(route('admin.privacy')); ?>">
+                                        <i class="fas fa-fw fa-table"></i>
+                                        <span>Privacy</span></a>    
+                                        <a class="collapse-item" href="">
+                                        <i class="fas fa-fw fa-table"></i>
+                                        <span>Dmca</span></a>
+                                    </div>
+                                </div>
+                                
+                            </li>
+    
+      <li class="nav-item">
+            <a class="nav-link" href="<?php echo e(route('admin.contact')); ?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Contact</span></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Dmca</span></a>
-    </li>
-
+      </li>
 
     <li class="nav-item">
         <a class="nav-link" href="<?php echo e(route('admin.users')); ?>">

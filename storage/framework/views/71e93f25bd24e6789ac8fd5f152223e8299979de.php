@@ -8,10 +8,10 @@
 
                 <div class="row">
                     <div class="col-md-4">
-                        <label><a href="https://placeholder.com"><img src="https://via.placeholder.com/200"></a></label>
+                        <label><a href="https://placeholder.com" ><img src="https://via.placeholder.com/200"  style="border-radius:15px;"></a></label>
                     </div>
                     <div class=" col-md-5">
-                        <h6><?php echo e(Auth::user()->name); ?> <?php echo e(Auth::user()->lastname); ?></h6>
+                        <h6><?php echo e(Auth::user()->firstname); ?> <?php echo e(Auth::user()->lastname); ?></h6>
                         <h7> <b>About me</b></h7>
                         <p> <?php echo e(Auth::user()->about); ?></p>
                         <h7><b>Gender - </b><?php echo e(Auth::user()->gender); ?></h7><br/>

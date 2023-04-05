@@ -9,14 +9,14 @@
 
                 <div class="row">
                     <div class="col-md-4">
-                        <label><a href="https://placeholder.com"><img src="https://via.placeholder.com/200"></a></label>
+                        <label><a href="https://placeholder.com" ><img src="https://via.placeholder.com/200"  style="border-radius:15px;"></a></label>
                     </div>
                     <div class=" col-md-5">
-                        <h6>{{ Auth::user()->name}} {{ Auth::user()->lastname}}</h6>
+                        <h6>{{ Auth::user()->firstname}} {{ Auth::user()->lastname}}</h6>
                         <h7> <b>About me</b></h7>
                         <p> {{Auth::user()->about}}</p>
-                        <h7><b>Gender - </b>{{Auth::user()->gender}}</h7><br/>
-                        <h7><b>Email  -    </b>{{Auth::user()->email}}</h7>  
+                        <h7><b>Gender - </b>{{Auth::user()->gender}} </h7><br/>
+                        <h7><b>Email  - </b>{{Auth::user()->email}}  </h7>  
                         </div>   
                         <div class="col-md-3">
                             @if(!empty(Auth::user()->fblink))

@@ -9,7 +9,7 @@ use App\Mail\ContactMail;
 class Contact extends Model
 {
     use HasFactory;
-    public $fillable = ['name', 'email', 'phone', 'subject', 'message'];
+    public $fillable = ['name', 'email',  'subject', 'message'];
   
     /**
      * Write code on Method
@@ -22,7 +22,7 @@ class Contact extends Model
   
         static::created(function ($item) {
                 
-            $adminEmail = "itkanchan1@gmail.com";
+            $adminEmail = "itlipymedia@gmail.com";
             Mail::to($adminEmail)->send(new ContactMail($item));
         });
     }

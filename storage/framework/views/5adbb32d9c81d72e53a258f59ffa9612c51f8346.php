@@ -30,7 +30,7 @@
                           
                             <div class="form-group">
                             <label class="required">First Name</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Firstname" name="firstname" value="<?php echo e(Auth::user()->name); ?>">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Firstname" name="firstname" value="<?php echo e(Auth::user()->firstname); ?>">
                            
                             </div>
                             <div class="form-group">                              
@@ -50,7 +50,7 @@
                                 <label class="tin"><img src="<?php echo e(asset('frontend/images/more/profile.png')); ?>"></label>
                             </div>
                          <div class="form-group">
-                           <input type="file" class="form-control  profile-button" id="inputAddress"  name="image" >                                               
+                           <input type="file" class="form-control  profile-button" id="image"  name="image"  value="<?php if(!empty( Auth::user())): ?> <img src=<?php echo e(asset( Auth::user()->image)); ?> <?php endif; ?>" >                                               
                          </div>
                        
                         <div class="form-group">

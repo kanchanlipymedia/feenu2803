@@ -29,7 +29,7 @@
                           
                             <div class="form-group">
                             <label class="required">First Name</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Firstname" name="firstname" value="{{ Auth::user()->name}}">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Firstname" name="firstname" value="{{ Auth::user()->firstname}}">
                            
                             </div>
                             <div class="form-group">                              
@@ -49,7 +49,7 @@
                                 <label class="tin"><img src="{{asset('frontend/images/more/profile.png')}}"></label>
                             </div>
                          <div class="form-group">
-                           <input type="file" class="form-control  profile-button" id="inputAddress"  name="image" >                                               
+                           <input type="file" class="form-control  profile-button" id="image"  name="image"  value="@if(!empty( Auth::user())) <img src={{asset( Auth::user()->image)}} @endif" >                                               
                          </div>
                        
                         <div class="form-group">
