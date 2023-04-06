@@ -36,7 +36,13 @@
                           </div>
                           <div class="form-group">
                             <label for="subject" class="required">Subject</label>
-                            <input type="text" name="subject" class="form-control" placeholder="Subject" value="<?php echo e(old('subject')); ?>">
+                      
+                            <select name="subject" value="<?php echo e(old('subject')); ?>" class="form-control">
+                                <option value="feedback">feedback</option>
+                                <option value="option2">option2</option>
+                                <option value="option3">option3</option>
+                                <option value="option4">option4</option>
+                            </select>                           
                             <?php if($errors->has('subject')): ?>
                                 <span class="text-danger"><?php echo e($errors->first('subject')); ?></span>
                             <?php endif; ?>

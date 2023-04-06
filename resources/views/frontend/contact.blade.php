@@ -35,7 +35,13 @@
                           </div>
                           <div class="form-group">
                             <label for="subject" class="required">Subject</label>
-                            <input type="text" name="subject" class="form-control" placeholder="Subject" value="{{ old('subject') }}">
+                      
+                            <select name="subject" value="{{ old('subject') }}" class="form-control">
+                                <option value="feedback">feedback</option>
+                                <option value="option2">option2</option>
+                                <option value="option3">option3</option>
+                                <option value="option4">option4</option>
+                            </select>                           
                             @if ($errors->has('subject'))
                                 <span class="text-danger">{{ $errors->first('subject') }}</span>
                             @endif
