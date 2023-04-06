@@ -35,21 +35,27 @@ class ProfileController extends Controller
             'email'=>'required|email|string|max:255'
         ]);
         $user =Auth::user();
-        $name=Auth::user()->name;
-        $Image = $request->file('image');
-        $ImagePath = "";
-        if(!empty($Image)){
-            $ImageDestinationPath = 'images/game-thumb';
-            $ImageFileName = str_replace(' ','_',$name).'_thumb_'.strtotime(now()).'.'.$Image->getClientOriginalExtension();
-            $Image->move($ImageDestinationPath,$ImageFileName);
-            $ImagePath = $ImageDestinationPath."/".$ImageFileName;
+        $imgname = "";
+        if($request->image=='image'){
+            $request->validate([
+                'image' => 'mimes:jpeg,bmp,png,jpg'
+            ]);
+
+            $request->image->store('images/profile','public');
+            $imgname = $request->image;
         }
         $user->firstname = $request['firstname'];
         $user->lastname = $request['lastname'];
         $user->name = $request['name'];
         $user->email = $request['email'];
         $user->gender=$request['gender'];
-        $user->about=$request['about'];                         
+        $user->about=$request['about'];      
+        if(!empty($imgname)) {
+            $user->image = $imgname;
+        
+    } else{
+        $user->image = $imgname;
+    }                        
         $user->fblink=$request['fblink'];   
         $user->twlink=$request['twlink'];   
         $user->instalink=$request['instalink'];

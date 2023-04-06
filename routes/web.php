@@ -65,59 +65,53 @@ Route::post('update-tpc', [FGameController::class, 'updateTPC'])->name('update-t
 Route::post('update-tpd', [FGameController::class, 'updateTPD'])->name('update-tpd');
 Route::get('profile/{userId}', [FrontController::class, 'userProfile'])->name('user-profile');
 Route::group(['prefix' => 'feenu','as'=>'admin.', 'middleware' => ['auth','isAdmin']], function(){
-    Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     // Route::get('profile', [UserController::class, 'profile'])->name('admin.profile');
-    Route::get('categories', [CategoryController::class, 'categories'])->name('categories');
-    Route::get('enquiry', [EnquiryController::class, 'contact'])->name('contact');
-
-    Route::match(['get','post'],'categories/add', [CategoryController::class, 'addCategory'])->name('categories-add');
-    Route::match(['get','post'],'categories/{categoryId}', [CategoryController::class, 'editCategory'])->name('categories-edit');
-    Route::match(['get','post'],'categories/delete/{categoryId}', [CategoryController::class, 'deleteCategory'])->name('categories-delete');
-    Route::get('tags', [TagController::class, 'tags'])->name('tags');
-    Route::match(['get','post'],'tags/add', [TagController::class, 'addTag'])->name('tags-add');
-    Route::match(['get','post'],'tags/{tagId}', [TagController::class, 'editTag'])->name('tags-edit');
-    Route::match(['get','post'],'tags/delete/{tagId}', [TagController::class, 'deleteTag'])->name('tags-delete');
-    Route::get('games', [GameController::class, 'games'])->name('games');
-    Route::match(['get','post'],'games/add', [GameController::class, 'addGame'])->name('games-add');
-    Route::match(['get','post'],'games/{gameId}', [GameController::class, 'editGame'])->name('games-edit');
-    Route::match(['get','post'],'games/delete/{gameId}', [GameController::class, 'deleteGame'])->name('games-delete');
-    Route::get('users', [UserController::class, 'users'])->name('users');
-    Route::post('users/status/update', [UserController::class, 'updateUserStatus'])->name('users-status-update');
-    Route::get('about', [AboutController::class, 'about'])->name('about');
-    Route::match(['get','post'],'about/add', [AboutController::class, 'addabout'])->name('about-add');
-    Route::match(['get','post'],'about/{id}', [AboutController::class, 'editabout'])->name('about-edit');
-    Route::match(['get','post'],'about/delete/{id}', [AboutController::class, 'deleteabout'])->name('about-delete');
-    Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
-    Route::get('/admin/profile/edit', [AdminController::class, 'AdminProfileEdit'])->name('admin.profile.edit');
-    Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
-    Route::get('/admin/change/password', [AdminController::class, 'AdminChangePassword'])->name('admin.change.password');
-    Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('admin.update.password');
-    Route::get('privacy', [PrivacyController::class, 'privacy'])->name('privacy');
-    Route::match(['get','post'],'privacy/add', [PrivacyController::class, 'addprivacy'])->name('privacy-add');
-    Route::match(['get','post'],'Privacy/{id}', [PrivacyController::class, 'editprivacy'])->name('privacy-edit');
-    Route::match(['get','post'],'privacy/delete/{id}', [PrivacyController::class, 'deleteprivacy'])->name('privacy-delete');
-
-    Route::get('comments', [CommentsController::class, 'comments'])->name('comments');
-    Route::post('comments/update-comment-status', [CommentsController::class, 'updateCommentStatus'])->name('update-comment-status');
-    Route::get('reports', [ReportController::class, 'reports'])->name('reports');
+Route::get('categories', [CategoryController::class, 'categories'])->name('categories');
+Route::get('enquiry', [EnquiryController::class, 'contact'])->name('contact');
+Route::match(['get','post'],'categories/add', [CategoryController::class, 'addCategory'])->name('categories-add');
+Route::match(['get','post'],'categories/{categoryId}', [CategoryController::class, 'editCategory'])->name('categories-edit');
+Route::match(['get','post'],'categories/delete/{categoryId}', [CategoryController::class, 'deleteCategory'])->name('categories-delete');
+Route::get('tags', [TagController::class, 'tags'])->name('tags');
+Route::match(['get','post'],'tags/add', [TagController::class, 'addTag'])->name('tags-add');
+Route::match(['get','post'],'tags/{tagId}', [TagController::class, 'editTag'])->name('tags-edit');
+Route::match(['get','post'],'tags/delete/{tagId}', [TagController::class, 'deleteTag'])->name('tags-delete');
+Route::get('games', [GameController::class, 'games'])->name('games');
+Route::match(['get','post'],'games/add', [GameController::class, 'addGame'])->name('games-add');
+Route::match(['get','post'],'games/{gameId}', [GameController::class, 'editGame'])->name('games-edit');
+Route::match(['get','post'],'games/delete/{gameId}', [GameController::class, 'deleteGame'])->name('games-delete');
+Route::get('users', [UserController::class, 'users'])->name('users');
+Route::post('users/status/update', [UserController::class, 'updateUserStatus'])->name('users-status-update');
+Route::get('about', [AboutController::class, 'about'])->name('about');
+Route::match(['get','post'],'about/add', [AboutController::class, 'addabout'])->name('about-add');
+Route::match(['get','post'],'about/{id}', [AboutController::class, 'editabout'])->name('about-edit');
+Route::match(['get','post'],'about/delete/{id}', [AboutController::class, 'deleteabout'])->name('about-delete');
+Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
+Route::get('/admin/profile/edit', [AdminController::class, 'AdminProfileEdit'])->name('admin.profile.edit');
+Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
+Route::get('/admin/change/password', [AdminController::class, 'AdminChangePassword'])->name('admin.change.password');
+Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('admin.update.password');
+Route::get('privacy', [PrivacyController::class, 'privacy'])->name('privacy');
+Route::match(['get','post'],'privacy/add', [PrivacyController::class, 'addprivacy'])->name('privacy-add');
+Route::match(['get','post'],'Privacy/{id}', [PrivacyController::class, 'editprivacy'])->name('privacy-edit');
+Route::match(['get','post'],'privacy/delete/{id}', [PrivacyController::class, 'deleteprivacy'])->name('privacy-delete');
+Route::get('comments', [CommentsController::class, 'comments'])->name('comments');
+Route::post('comments/update-comment-status', [CommentsController::class, 'updateCommentStatus'])->name('update-comment-status');
+Route::get('reports', [ReportController::class, 'reports'])->name('reports');
 });
-
 Route::group(['middleware' => ['auth','isUser']], function(){
-    Route::get('dashboard', [FrontController::class, 'dashboard'])->name('dashboard');
-    Route::get('categoris', [CategoriesController::class, 'categories']);
-    Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
-    Route::get('editprofile', [ProfileController::class, 'editprofile'])->name('editprofile');
-    Route::post('profileUpdate',[ProfileController::class,'profileUpdate'])->name('profileUpdate');
-    Route::post('/change-password', [ChangePwdController::class, 'updatePassword'])->name('update-password');
-    Route::get('changepassword', [ChangePwdController::class, 'changepassword'])->name('changepassword');
-    Route::get('users', [FUserController::class, 'users'])->name('users');
-    Route::post('save-comment', [FCommentController::class, 'saveComment'])->name('save-comment');
-    Route::post('update-favorite-status', [FCommentController::class, 'updateFavoriteStatus'])->name('update-favorite-status');
-    Route::post('update-like-status', [FCommentController::class, 'updateLikeStatus'])->name('update-like-status');
-
-
-    // Route::match(['get','post'],'profile/{id}', [FUsersController::class, 'editprofile'])->name('frontend.editprofile');
-
+Route::get('dashboard', [FrontController::class, 'dashboard'])->name('dashboard');
+Route::get('categoris', [CategoriesController::class, 'categories']);
+Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
+Route::get('editprofile', [ProfileController::class, 'editprofile'])->name('editprofile');
+Route::post('profileUpdate',[ProfileController::class,'profileUpdate'])->name('profileUpdate');
+Route::post('/change-password', [ChangePwdController::class, 'updatePassword'])->name('update-password');
+Route::get('changepassword', [ChangePwdController::class, 'changepassword'])->name('changepassword');
+Route::get('users', [FUserController::class, 'users'])->name('users');
+Route::post('save-comment', [FCommentController::class, 'saveComment'])->name('save-comment');
+Route::post('update-favorite-status', [FCommentController::class, 'updateFavoriteStatus'])->name('update-favorite-status');
+Route::post('update-like-status', [FCommentController::class, 'updateLikeStatus'])->name('update-like-status');
+// Route::match(['get','post'],'profile/{id}', [FUsersController::class, 'editprofile'])->name('frontend.editprofile');
 });
 
 
