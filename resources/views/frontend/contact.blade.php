@@ -8,7 +8,7 @@
                     <h4 ><img src="{{url('frontend/images/icons/Message.png')}}"></h4>
                     <h2 >Contact Us</h2>
                     <h3>For any quation of feedback use the form below or you can reach us at</h3>
-                    <h6><center>Support [At] Feenu [dot] com</center></h6>
+                    <h2 >Support@Feenu.com</h2>
                     @if(Session::has('success'))
                             <div class="alert alert-success">
                                 {{Session::get('success')}}
@@ -24,8 +24,8 @@
                                   <span class="text-danger">{{ $errors->first('name') }}</span>
                               @endif
                             </div>
-                          
-                            <div class="form-group col-md-6">
+                  
+                            <div class="form-group">
                               <label class="required">Email</label>
                               <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
                               @if ($errors->has('email'))
@@ -35,13 +35,7 @@
                           </div>
                           <div class="form-group">
                             <label for="subject" class="required">Subject</label>
-                      
-                            <select name="subject" value="{{ old('subject') }}" class="form-control">
-                                <option value="feedback">feedback</option>
-                                <option value="option2">option2</option>
-                                <option value="option3">option3</option>
-                                <option value="option4">option4</option>
-                            </select>                           
+                            <input type="text" name="subject" class="form-control" placeholder="Subject" value="{{ old('subject') }}">
                             @if ($errors->has('subject'))
                                 <span class="text-danger">{{ $errors->first('subject') }}</span>
                             @endif
@@ -50,7 +44,7 @@
                      
                        <div class="form-group">
                        <label class="required">Message</label>
-                       <textarea name="message" rows="3" class="form-control" value="{{ old('message') }}" placeholder="message"></textarea>
+                       <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
                        @if ($errors->has('message'))
                            <span class="text-danger">{{ $errors->first('message') }}</span>
                        @endif

@@ -7,7 +7,7 @@
                     <h4 ><img src="<?php echo e(url('frontend/images/icons/Message.png')); ?>"></h4>
                     <h2 >Contact Us</h2>
                     <h3>For any quation of feedback use the form below or you can reach us at</h3>
-                    <h6><center>Support [At] Feenu [dot] com</center></h6>
+                    <h2 >Support@Feenu.com</h2>
                     <?php if(Session::has('success')): ?>
                             <div class="alert alert-success">
                                 <?php echo e(Session::get('success')); ?>
@@ -25,8 +25,8 @@
                                   <span class="text-danger"><?php echo e($errors->first('name')); ?></span>
                               <?php endif; ?>
                             </div>
-                          
-                            <div class="form-group col-md-6">
+                  
+                            <div class="form-group">
                               <label class="required">Email</label>
                               <input type="text" name="email" class="form-control" placeholder="Email" value="<?php echo e(old('email')); ?>">
                               <?php if($errors->has('email')): ?>
@@ -36,13 +36,7 @@
                           </div>
                           <div class="form-group">
                             <label for="subject" class="required">Subject</label>
-                      
-                            <select name="subject" value="<?php echo e(old('subject')); ?>" class="form-control">
-                                <option value="feedback">feedback</option>
-                                <option value="option2">option2</option>
-                                <option value="option3">option3</option>
-                                <option value="option4">option4</option>
-                            </select>                           
+                            <input type="text" name="subject" class="form-control" placeholder="Subject" value="<?php echo e(old('subject')); ?>">
                             <?php if($errors->has('subject')): ?>
                                 <span class="text-danger"><?php echo e($errors->first('subject')); ?></span>
                             <?php endif; ?>
@@ -51,7 +45,7 @@
                      
                        <div class="form-group">
                        <label class="required">Message</label>
-                       <textarea name="message" rows="3" class="form-control" value="<?php echo e(old('message')); ?>" placeholder="message"></textarea>
+                       <textarea name="message" rows="3" class="form-control"><?php echo e(old('message')); ?></textarea>
                        <?php if($errors->has('message')): ?>
                            <span class="text-danger"><?php echo e($errors->first('message')); ?></span>
                        <?php endif; ?>
