@@ -7,7 +7,7 @@
                     <h4 ><img src="<?php echo e(url('frontend/images/icons/Message.png')); ?>"></h4>
                     <h2 >Contact Us</h2>
                     <h3>For any quation of feedback use the form below or you can reach us at</h3>
-                    <h2 >Support@Feenu.com</h2>
+                    <h4 style="font-weight:bold;" >Support [At] Feenu [dot] com</h4>
                     <?php if(Session::has('success')): ?>
                             <div class="alert alert-success">
                                 <?php echo e(Session::get('success')); ?>
