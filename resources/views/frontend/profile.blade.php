@@ -8,10 +8,10 @@
                  <a href="{{route('editprofile')}}"><i class="fas fa-edit" placeholder="edit_profile"></i></a>
 
                 <div class="row">
-                    <div class="col-md-4">
-                        <label><a href="https://placeholder.com"><img src="https://via.placeholder.com/200"></a></label>
+                    <div class="col-md-3">
+                        <label><a href=""><img src="https://via.placeholder.com/200" style="border-radius:10px;"></a></label>
                     </div>
-                    <div class=" col-md-5">
+                    <div class=" col-md-6">
                         <h6>{{ Auth::user()->name}} {{ Auth::user()->lastname}}</h6>
                         <h7> <b>About me</b></h7>
                         <p> {{Auth::user()->about}}</p>
@@ -33,7 +33,7 @@
                <!-- start slider-->
 
                <div class="nit-related gGame">
-                <h6 style="color:328bdb; padding:10px" >Last Played Games</h6>
+                <h6 style="color:#328bdb; padding:10px" >Last Played Games</h6>
                 <div class="owl-carousel lastPlayed-carousel owl-theme">
                     @foreach ($recentPlayGames as $game)
                         <div class="item">
