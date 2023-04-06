@@ -23,7 +23,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            
+                            <th>Subject</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Message</th>
@@ -34,7 +34,7 @@
                         <?php $__currentLoopData = $contacts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $contact): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr>
                             
-                            
+                            <td><?php echo e($contact->subject); ?></td>
                             <td><?php echo e($contact->name); ?></td>
                             <td><?php echo e($contact->email); ?></td>
                             <td><?php echo e($contact->message); ?></td>

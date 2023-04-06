@@ -23,7 +23,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            
+                            <th>Subject</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Message</th>
@@ -34,7 +34,7 @@
                         @foreach($contacts as $contact)
                         <tr>
                             
-                            
+                            <td>{{$contact->subject}}</td>
                             <td>{{$contact->name}}</td>
                             <td>{{$contact->email}}</td>
                             <td>{{$contact->message}}</td>

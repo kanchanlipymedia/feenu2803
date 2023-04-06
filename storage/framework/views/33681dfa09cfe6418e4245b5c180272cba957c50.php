@@ -1,4 +1,4 @@
-<h2><strong>User details: <?php echo e($data->name); ?> </strong></h2> 
+<h2><strong>This is <?php echo e($data->name); ?> </strong></h2> 
 <br>
     
 
