@@ -25,7 +25,7 @@
                               @endif
                             </div>
                   
-                            <div class="form-group">
+                            <div class="form-group col-md-6">
                               <label class="required">Email</label>
                               <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
                               @if ($errors->has('email'))
