@@ -12,7 +12,7 @@
                         <label><a href=""><img src="https://via.placeholder.com/200" style="border-radius:10px;"></a></label>
                     </div>
                     <div class=" col-md-6">
-                        <h6>{{ Auth::user()->name}} {{ Auth::user()->lastname}}</h6>
+                        <h5>{{ Auth::user()->name}} {{ Auth::user()->lastname}}</h5>
                         <h7> <b>About me</b></h7>
                         <p> {{Auth::user()->about}}</p>
                         <h7><b>Gender - </b>{{Auth::user()->gender}}</h7><br/>

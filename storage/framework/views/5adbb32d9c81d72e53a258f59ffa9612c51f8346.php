@@ -56,9 +56,11 @@
                         <div class="form-group">
                             <label class="required">Gender</label><br>                          
                                          
-                            <input  type="Radio" name="gender" value="Male" <?php echo e(Auth::user()->gender =='Male' ? 'checked' : ''); ?> ><label >Male</label>
+                            <input  type="Radio" name="gender" value="Male" <?php echo e(Auth::user()->gender =='Male' ? 'checked' : ''); ?>  style=" width: 10px;
+    height: 10px;"><label style="margin-left:3px;">Male</label>
                             
-                            <input type="Radio" name="gender" value="Female" <?php echo e(Auth::user()->gender =='Female' ? 'checked' : ''); ?>><label >Female </label>                       
+                            <input type="Radio" name="gender" value="Female" <?php echo e(Auth::user()->gender =='Female' ? 'checked' : ''); ?>  style=" width: 10px;
+    height: 10px;"><label style="margin-left:3px;">Female </label>                       
                         </div> 
                         <div class="form-group">
                             <label class="required">Email</label>
@@ -79,9 +81,11 @@
                        
                         <div class="form-group">
                           <label >Profile Show</label><br>    
-                          <input  type="Radio" name="profile" value="Private" <?php echo e(Auth::user()->profile =='Private' ? 'checked' : ''); ?> ><label >Private</label>
+                          <input  type="Radio" name="profile" value="Private" <?php echo e(Auth::user()->profile =='Private' ? 'checked' : ''); ?>  style=" width: 10px;
+    height: 10px;"><label style="margin-left:3px;">Private</label>
                             
-                            <input type="Radio" name="profile" value="Public" <?php echo e(Auth::user()->profile =='Public' ? 'checked' : ''); ?>><label >Public </label>                        
+                            <input type="Radio" name="profile" value="Public" <?php echo e(Auth::user()->profile =='Public' ? 'checked' : ''); ?>  style=" width: 10px;
+    height: 10px;"><label style="margin-left:3px;">Public </label>                        
                                                
                         </div>                     
                        <div class="form-group">
