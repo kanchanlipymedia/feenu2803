@@ -55,8 +55,10 @@
                        
                         <div class="form-group">
                             <label class="required">Gender</label><br>                          
-                            <input  type="Radio" name="gender" value="<?php echo e(Auth::user()->gender); ?>" ><label >Male</label>
-                            <input type="Radio" name="gender" value="<?php echo e(Auth::user()->gender); ?>"><label >Female </label>                          
+                                         
+                            <input  type="Radio" name="gender" value="Male" <?php echo e(Auth::user()->gender =='Male' ? 'checked' : ''); ?> ><label >Male</label>
+                            
+                            <input type="Radio" name="gender" value="Female" <?php echo e(Auth::user()->gender =='Female' ? 'checked' : ''); ?>><label >Female </label>                       
                         </div> 
                         <div class="form-group">
                             <label class="required">Email</label>

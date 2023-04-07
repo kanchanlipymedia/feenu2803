@@ -54,8 +54,10 @@
                        
                         <div class="form-group">
                             <label class="required">Gender</label><br>                          
-                            <input  type="Radio" name="gender" value="{{ Auth::user()->gender}}" ><label >Male</label>
-                            <input type="Radio" name="gender" value="{{ Auth::user()->gender}}"><label >Female </label>                          
+                                         
+                            <input  type="Radio" name="gender" value="Male" {{ Auth::user()->gender =='Male' ? 'checked' : '' }} ><label >Male</label>
+                            
+                            <input type="Radio" name="gender" value="Female" {{ Auth::user()->gender =='Female' ? 'checked' : '' }}><label >Female </label>                       
                         </div> 
                         <div class="form-group">
                             <label class="required">Email</label>
@@ -75,9 +77,11 @@
                         </div>
                        
                         <div class="form-group">
-                          <label >Profile Show</label><br>                        
-                          <input type="Radio" name="radio2text" value="public" ><label >Public</label>
-                          <input type="Radio" name="radio2text" value="Private"><label >Private </label>                           
+                          <label >Profile Show</label><br>    
+                          <input  type="Radio" name="profile" value="Private" {{ Auth::user()->profile =='Private' ? 'checked' : '' }} ><label >Private</label>
+                            
+                            <input type="Radio" name="profile" value="Public" {{ Auth::user()->profile =='Public' ? 'checked' : '' }}><label >Public </label>                        
+                                               
                         </div>                     
                        <div class="form-group">
                             <button type="submit" class="change-password-button"><a href="{{route('changepassword')}}"> Change Password</a></button>
