@@ -86,11 +86,11 @@ Route::get('about', [AboutController::class, 'about'])->name('about');
 Route::match(['get','post'],'about/add', [AboutController::class, 'addabout'])->name('about-add');
 Route::match(['get','post'],'about/{id}', [AboutController::class, 'editabout'])->name('about-edit');
 Route::match(['get','post'],'about/delete/{id}', [AboutController::class, 'deleteabout'])->name('about-delete');
-Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
-Route::get('/admin/profile/edit', [AdminController::class, 'AdminProfileEdit'])->name('admin.profile.edit');
-Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
-Route::get('/admin/change/password', [AdminController::class, 'AdminChangePassword'])->name('admin.change.password');
-Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('admin.update.password');
+//Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
+//Route::get('/admin/profile/edit', [AdminController::class, 'AdminProfileEdit'])->name('admin.profile.edit');
+//Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
+//Route::get('/admin/change/password', [AdminController::class, 'AdminChangePassword'])->name('admin.change.password');
+//Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('admin.update.password');
 Route::get('privacy', [PrivacyController::class, 'privacy'])->name('privacy');
 Route::match(['get','post'],'privacy/add', [PrivacyController::class, 'addprivacy'])->name('privacy-add');
 Route::match(['get','post'],'Privacy/{id}', [PrivacyController::class, 'editprivacy'])->name('privacy-edit');
@@ -98,6 +98,7 @@ Route::match(['get','post'],'privacy/delete/{id}', [PrivacyController::class, 'd
 Route::get('comments', [CommentsController::class, 'comments'])->name('comments');
 Route::post('comments/update-comment-status', [CommentsController::class, 'updateCommentStatus'])->name('update-comment-status');
 Route::get('reports', [ReportController::class, 'reports'])->name('reports');
+Route::delete('delete-all', [EnquiryController::class, 'removeMulti'])->name('delete-all');
 });
 Route::group(['middleware' => ['auth','isUser']], function(){
 Route::get('dashboard', [FrontController::class, 'dashboard'])->name('dashboard');

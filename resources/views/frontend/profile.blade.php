@@ -41,9 +41,7 @@
                         </div>
                     @endforeach
                </div>
-               
-
-               <h6 style="color:rgb(240, 199, 20); padding:10px"">Favorite Games</h6>
+                    <h6 style="color:rgb(240, 199, 20); padding:10px">Favorite Games</h6>
                <div class="owl-carousel fvt-carousel owl-theme">
                     @foreach ($favoriteGames as $game)
                         <div class="item">

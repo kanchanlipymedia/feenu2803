@@ -21,13 +21,11 @@
                         <h6 class="m-0 font-weight-bold text-primary">Change password</h6>
                     </div>
                     <!-- Card Body -->
-                    <div class="card-body">
-                    
+                    <div class="card-body">                    
                         <form method="post" action="{{ route('admin.update.password') }}">
                             @csrf    
-                            <div class="row">
-                       
-                            <div class="col-12">						
+                            <div class="row">                       
+                            <div class="col-12">		
                             
                                 <div class="row">
                                     

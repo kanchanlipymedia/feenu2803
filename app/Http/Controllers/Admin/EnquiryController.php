@@ -15,4 +15,13 @@ class EnquiryController extends Controller
      
         return view('admin.contact',['contacts'=>$contacts]);
     }
+  
+ 
+    public function removeMulti(Request $request)
+    {
+        $ids = $request->ids;
+        Contact::whereIn('id',explode(",",$ids))->delete();
+        return response()->json(['status'=>true,'message'=>"Enquiry successfully removed."]);
+         
+    }
 }
