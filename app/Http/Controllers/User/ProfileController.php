@@ -48,6 +48,7 @@ class ProfileController extends Controller
         $user->lastname = $request['lastname'];
         $user->name = $request['name'];
         $user->email = $request['email'];
+        $user->profile=$request['profile'];
         $user->gender=$request['gender'];
         $user->about=$request['about'];      
         if(!empty($imgname)) {
