@@ -29,21 +29,21 @@
                           
                             <div class="form-group">
                             <label class="required">First Name</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Firstname" name="firstname" value="{{ Auth::user()->firstname}}">
+                            <input type="text" class="form-control col-md-4" id="inputEmail4" placeholder="Firstname" name="firstname" value="{{ Auth::user()->firstname}}">
                            
                             </div>
                             <div class="form-group">                              
                                 <label class="required">Last Name</label>
-                                <input type="text" class="form-control" id="inputPassword4" placeholder="Latstname" name="lastname" value="{{ Auth::user()->lastname}}" >
+                                <input type="text" class="form-control col-md-4" id="inputPassword4" placeholder="Latstname" name="lastname" value="{{ Auth::user()->lastname}}" >
                                
                             </div>
                             <div class="form-group">
                               <label class="required">User Name</label>
-                              <input type="text" class="form-control" id="inputAddress" placeholder="Username" name="name" value="{{ Auth::user()->name}}" >                              
+                              <input type="text" class="form-control col-md-4" id="inputAddress" placeholder="Username" name="name" value="{{ Auth::user()->name}}" >                              
                            </div>
                            <div class="form-group">
                                 <label class="required">About me</label>
-                                <input type="text" class="form-control" id="inputAddress" placeholder="About Your Self" name="about"  value="{{ Auth::user()->about}}" >
+                                <input type="text" class="form-control col-md-4" id="inputAddress" placeholder="About Your Self" name="about"  value="{{ Auth::user()->about}}" >
                             </div>
                            <div class="form-group">
                                 <label class="tin"><img src="{{asset('frontend/images/more/profile.png')}}"></label>
@@ -61,19 +61,19 @@
                         </div> 
                         <div class="form-group">
                             <label class="required">Email</label>
-                            <input class="form-control" placeholder="Email..." type="email" name="email" value="{{ Auth::user()->email}}" >
+                            <input class="form-control col-md-4" placeholder="Email..." type="email" name="email" value="{{ Auth::user()->email}}" >
                             </div> <!-- form-group// -->
                         <div class="form-group">                              
                             <label >Facebook Profile Link</label>
-                            <input type="text" class="form-control" id="fblink" placeholder="Facebook..." name="fblink" value="{{ Auth::user()->fblink}}">
+                            <input type="text" class="form-control col-md-4" id="fblink" placeholder="Facebook..." name="fblink" value="{{ Auth::user()->fblink}}">
                         </div>
                         <div class="form-group">                              
                             <label >Twitter Profile Link</label>
-                            <input type="text" class="form-control" id="twlink" placeholder="Twitter..." name="twlink" value="{{ Auth::user()->twlink}}">
+                            <input type="text" class="form-control col-md-4" id="twlink" placeholder="Twitter..." name="twlink" value="{{ Auth::user()->twlink}}">
                         </div>
                         <div class="form-group">                              
                             <label >Instagram Profile Link</label>
-                            <input type="text" class="form-control" id="instalink" placeholder="Instagram..." name="instalink" value="{{ Auth::user()->instalink}}">
+                            <input type="text" class="form-control col-md-4" id="instalink" placeholder="Instagram..." name="instalink" value="{{ Auth::user()->instalink}}">
                         </div>
                        
                         <div class="form-group">
