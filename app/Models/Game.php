@@ -34,4 +34,12 @@ class Game extends Model
     {
         return Game::count();
     }
+    public function gamesTags()
+    {
+        $tagIds = $this->tags;
+        $tagIdsArray = explode(',',$tagIds);
+        $tags = Tag::whereIn('tag_id',$tagIdsArray)->get();
+        return $tags;
+        
+    }
 }

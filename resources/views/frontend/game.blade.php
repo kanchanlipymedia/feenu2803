@@ -125,9 +125,9 @@
                                 <div class="nit-dis">
                         <div class="nit-flex jcsb">
                             <div class="btn-box">
-                                <a href="#">shooting</a>
-                                <a href="#">race</a>
-                                <a href="#">online game</a>
+                                @foreach($game->gamesTags() as $tag)
+                                <a href="#">{{$tag->name}}</a>
+                                @endforeach
                             </div>
 
                             <div class="app-box">

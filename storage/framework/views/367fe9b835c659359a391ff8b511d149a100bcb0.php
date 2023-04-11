@@ -124,9 +124,9 @@
                                 <div class="nit-dis">
                         <div class="nit-flex jcsb">
                             <div class="btn-box">
-                                <a href="#">shooting</a>
-                                <a href="#">race</a>
-                                <a href="#">online game</a>
+                                <?php $__currentLoopData = $game->gamesTags(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <a href="#"><?php echo e($tag->name); ?></a>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
 
                             <div class="app-box">
