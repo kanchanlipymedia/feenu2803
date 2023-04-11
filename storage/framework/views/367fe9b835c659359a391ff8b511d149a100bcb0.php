@@ -97,9 +97,9 @@
 
                                         <button onclick="myFunction()" id="myBtn">share<i class="fa fa-share"
                                                 style="font-size:14px;color:rgb(22, 189, 97)"></i></button>
-                                        <ul><span id="dots"></span><span id="more"><a href="#"
+                                        <ul><span id="dots"></span><span id="more"><a href="https://www.facebook.com/" target="_blank"
                                                     class="fab fa-facebook"></a>
-                                                <a href="#" class="fab fa-twitter"></a>
+                                                <a href="" target="_blank"class="fab fa-twitter"></a>
                                                 <a href="#" class="fab fa-google"></a>
                                                 <a href="#" class="fab fa-linkedin"></a>
                                                 <a href="#" class="fab fa-youtube"></a>
