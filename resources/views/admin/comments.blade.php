@@ -68,7 +68,7 @@
         var url = $(this).data('url');
         var commentId = $(this).data('id');
         var data = {
-            'commentId': commentId,
+            'comment_id': commentId,
             'status':status
         };
         $.ajax({

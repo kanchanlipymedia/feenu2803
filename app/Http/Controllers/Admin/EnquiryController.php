@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use DB;
+use Session;
 
 
 class EnquiryController extends Controller
@@ -17,11 +19,27 @@ class EnquiryController extends Controller
     }
   
  
-    public function removeMulti(Request $request)
-    {
-        $ids = $request->ids;
-        Contact::whereIn('id',explode(",",$ids))->delete();
-        return response()->json(['status'=>true,'message'=>"Enquiry successfully removed."]);
-         
+    public function contactDelete($enquiryId, Request $request){
+
+        $enquiry = Contact::where('id',$enquiryId)->first();
+        if(empty($enquiry))
+            abort(404);
+
+        $enquiry->delete();
+        return redirect()->route('admin.contact');
+
+    }
+
+    public function contactDeleteBulk(Request $request){
+
+        $selectedIds = $request->get('selectedIds');
+        DB::table('contacts')->whereIn('id', $selectedIds)->delete();
+     
+        //$request->session()->flash('message', 'Deleted Successfully');
+        $response = [
+            'status'=>'success',
+            'message'=> 'Deleted Successfully'
+        ];
+        return response()->json($response);
     }
 }

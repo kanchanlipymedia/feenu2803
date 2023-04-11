@@ -22,7 +22,7 @@
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">                    
-                        <form method="post" action="{{ route('admin.update.password') }}">
+                        <form method="post" action="">
                             @csrf    
                             <div class="row">                       
                             <div class="col-12">		

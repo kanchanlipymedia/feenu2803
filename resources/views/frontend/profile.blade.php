@@ -2,11 +2,8 @@
 @section('main')
     <div class="nit-card">
         <aside class="col-md-8">
-
             <div class="profile-card-body">
-
                  <a href="{{route('editprofile')}}"><i class="fas fa-edit" placeholder="edit_profile"></i></a>
-
                 <div class="row">
                     <div class="col-md-3">
                         <label><a href=""><img src="https://via.placeholder.com/200" style="border-radius:10px;"></a></label>

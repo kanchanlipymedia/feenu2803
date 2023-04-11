@@ -88,10 +88,10 @@
                                         data-game-id="<?php echo e($game->game_id); ?>" data-favorite-status=<?php if($favoriteStatus): ?> "0"
                                         <?php else: ?> "1" <?php endif; ?>><span>Favorite</span><i
                                             class="<?php if($favoriteStatus): ?> fas <?php else: ?> far <?php endif; ?> fa-heart"
-                                            style="color: red;cursor: pointer;"></i></li>
+                                            style="color: red;cursor: pointer;margin-left:5px;"></i></li>
                                     <li class="report-btn" data-game-id="<?php echo e($game->game_id); ?>" style="cursor: pointer;">
                                         <span>Report</span><i class="fa fa-exclamation-triangle"
-                                            style="font-size:14px;color:rgb(241, 199, 10)"></i></li>
+                                            style="font-size:14px;color:rgb(241, 199, 10);"></i></li>
 
                                     <div class="shareBox">
 

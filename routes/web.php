@@ -64,11 +64,16 @@ Route::post('save-report', [ReportController::class, 'saveReport'])->name('save-
 Route::post('update-tpc', [FGameController::class, 'updateTPC'])->name('update-tpc');
 Route::post('update-tpd', [FGameController::class, 'updateTPD'])->name('update-tpd');
 Route::get('profile/{userId}', [FrontController::class, 'userProfile'])->name('user-profile');
+
+
 Route::group(['prefix' => 'feenu','as'=>'admin.', 'middleware' => ['auth','isAdmin']], function(){
 Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     // Route::get('profile', [UserController::class, 'profile'])->name('admin.profile');
 Route::get('categories', [CategoryController::class, 'categories'])->name('categories');
 Route::get('enquiry', [EnquiryController::class, 'contact'])->name('contact');
+Route::get('enquiry', [EnquiryController::class, 'contact'])->name('contact');
+Route::get('enquiry/delete/{enquiryId}', [EnquiryController::class, 'contactDelete'])->name('contact-delete');
+Route::post('enquiry-bulk-delete', [EnquiryController::class, 'contactDeleteBulk'])->name('contact-delete-bulk');
 Route::match(['get','post'],'categories/add', [CategoryController::class, 'addCategory'])->name('categories-add');
 Route::match(['get','post'],'categories/{categoryId}', [CategoryController::class, 'editCategory'])->name('categories-edit');
 Route::match(['get','post'],'categories/delete/{categoryId}', [CategoryController::class, 'deleteCategory'])->name('categories-delete');
@@ -98,7 +103,8 @@ Route::match(['get','post'],'privacy/delete/{id}', [PrivacyController::class, 'd
 Route::get('comments', [CommentsController::class, 'comments'])->name('comments');
 Route::post('comments/update-comment-status', [CommentsController::class, 'updateCommentStatus'])->name('update-comment-status');
 Route::get('reports', [ReportController::class, 'reports'])->name('reports');
-Route::delete('delete-all', [EnquiryController::class, 'removeMulti'])->name('delete-all');
+Route::delete('removeMulti', [EnquiryController::class, 'removeMulti'])->name('removeMulti');
+Route::get('AdminChangePassword',[AdminController::class,'AdminChangePassword'])->name('AdminChangePassword');
 });
 Route::group(['middleware' => ['auth','isUser']], function(){
 Route::get('dashboard', [FrontController::class, 'dashboard'])->name('dashboard');

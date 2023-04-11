@@ -13,12 +13,7 @@
         
 
             @foreach($games as $game)
-
-
-
              <li class="game-box"><a href="{{route('game-detail',['gameId'=>$game->game_id])}}"><img src="{{asset($game->game_thumb)}}"/><figcaption>{{$game->shortName()}}</figcaption></a></li>
-
-
             @endforeach
       </ul>
      </div>
@@ -30,6 +25,5 @@
 @endsection
 @section('scripts')
 <script>
-
 </script>
 @stop

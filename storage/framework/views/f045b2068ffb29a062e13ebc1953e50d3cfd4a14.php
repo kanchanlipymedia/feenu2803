@@ -12,12 +12,7 @@
         
 
             <?php $__currentLoopData = $games; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $game): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
-
-
              <li class="game-box"><a href="<?php echo e(route('game-detail',['gameId'=>$game->game_id])); ?>"><img src="<?php echo e(asset($game->game_thumb)); ?>"/><figcaption><?php echo e($game->shortName()); ?></figcaption></a></li>
-
-
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       </ul>
      </div>
@@ -29,7 +24,6 @@
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('scripts'); ?>
 <script>
-
 </script>
 <?php $__env->stopSection(); ?>
 

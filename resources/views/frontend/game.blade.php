@@ -89,10 +89,10 @@
                                         data-game-id="{{$game->game_id}}" data-favorite-status=@if($favoriteStatus) "0"
                                         @else "1" @endif><span>Favorite</span><i
                                             class="@if($favoriteStatus) fas @else far @endif fa-heart"
-                                            style="color: red;cursor: pointer;"></i></li>
+                                            style="color: red;cursor: pointer;margin-left:5px;"></i></li>
                                     <li class="report-btn" data-game-id="{{$game->game_id}}" style="cursor: pointer;">
                                         <span>Report</span><i class="fa fa-exclamation-triangle"
-                                            style="font-size:14px;color:rgb(241, 199, 10)"></i></li>
+                                            style="font-size:14px;color:rgb(241, 199, 10);"></i></li>
 
                                     <div class="shareBox">
 
